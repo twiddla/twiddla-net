@@ -39,7 +39,7 @@ namespace Web.Helpers
 		/// 
 		public static int CreateMeeting(string meetingtitle, string meetingpassword, string url)
 		{
-			string endpoint = String.Format(@"http://{0}/new.aspx", GetTwiddlaHost(HttpContext.Current.Request));
+			string endpoint = String.Format(@"http://{0}/API/CreateMeeting.aspx", GetTwiddlaHost(HttpContext.Current.Request));
 
 			APICaller caller = new APICaller(endpoint);
 			caller.Add("username", TwiddlaUsername);
